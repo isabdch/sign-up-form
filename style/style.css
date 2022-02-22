@@ -268,7 +268,7 @@ a {
 
 .video div:before,
 .video div:after {
-    content: attr(title);
+    content: attr(data-value);
     position: absolute;
 }
 
