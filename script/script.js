@@ -19,7 +19,7 @@ passwordInput.addEventListener("click", hideBalloon);
 
 // functions
 function showPassword() {
-  // when user click in the show password button
+  // when user click in the button the password will show
   slashedEyeBtn.style.display = "none";
   openEyeBtn.style.display = "inline";
 
@@ -27,7 +27,7 @@ function showPassword() {
 }
 
 function hidePassword() {
-  // when user click in the hide password button
+  // when user click in the button the password will hide
   slashedEyeBtn.style.display = "inline";
   openEyeBtn.style.display = "none";
 
@@ -35,7 +35,7 @@ function hidePassword() {
 }
 
 function checkBox() {
-  // add or remove class 'checked' when user click in the checkbox  
+  // add or remove class 'checked' when user click in the checkbox
   if (checkbox.classList.contains("checked") == false) {
     checkbox.classList.add("checked");
   } else {
@@ -44,7 +44,7 @@ function checkBox() {
 }
 
 function checkFields(event) {
-  // if   
+  // if some field is empty, user is not allowed to continue and the pop-up will appear
   if (
     usernameInput.value == "" ||
     emailInput.value == "" ||
@@ -64,6 +64,7 @@ function checkFields(event) {
     }
   }
 
+  // if username field has less than 4 characters, user is not allowed to continue and the pop-up will appear
   if (usernameInput.value.length < 4) {
     event.preventDefault();
 
@@ -81,6 +82,7 @@ function checkFields(event) {
     }
   }
 
+  // if password field has less than 5 characters, does not include 1 upper case letter, 1 lower case letter and 1 special character, user is not allowed to continue and the pop-up will appear
   if (
     passwordInput.value.match(
       /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{5,25}$/
@@ -93,7 +95,7 @@ function checkFields(event) {
     passwordInput.parentElement.setAttribute("data-balloon-visible", "");
     passwordInput.parentElement.setAttribute(
       "aria-label",
-      "Your password must contain at least: 5-25 characters, 1 number, 1 capital letter and 1 special character"
+      "Your password must contain at least: 5-25 characters, 1 number, 1 upper case letter, 1 lower case letter and 1 special character"
     );
 
     if (smallerScreen.matches) {
@@ -103,6 +105,7 @@ function checkFields(event) {
     }
   }
 
+  // if password field includes spaces user is not allowed to continue and the pop-up will appear
   if (passwordInput.value.indexOf(" ") >= 0) {
     event.preventDefault();
 
@@ -122,6 +125,7 @@ function checkFields(event) {
 }
 
 function hideBalloon(event) {
+  // when clicked, input's pop-up will desappear  
   let element = event.target.parentElement;
 
   element.removeAttribute("data-balloon-length");
