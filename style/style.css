@@ -85,15 +85,6 @@
     box-sizing: border-box;
 }
 
-*::-webkit-scrollbar {
-    width: 5px;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #9C95DC;
-    border-radius: 5px;
-}
-
 body {
     height: 100vh;
 }
@@ -132,6 +123,11 @@ a {
     position: absolute;
     top: 0;
     margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.signUpSection .logo img {
+    height: 18px;
 }
 
 .signUpSection .logo span {
