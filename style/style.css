@@ -181,9 +181,28 @@ a {
     margin-top: -3px;
 }
 
+.signUpSection .content form .passwordDiv {
+    position: relative;
+}
+
 .signUpSection .content form #passwordInput {
     letter-spacing: 2px;
     width: 90%;
+}
+
+.signUpSection .content form .passwordDiv .fa-solid {
+    color: #301c38;
+    font-size: 1.2em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.signUpSection .content form .passwordDiv .fa-solid fa-eye {
+    display: none;
 }
 
 .signUpSection .content form div:last-of-type {
