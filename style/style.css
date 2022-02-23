@@ -95,23 +95,6 @@ a {
     justify-content: center;
     align-items: center;
     color: #f0f8ff;
-    position: relative;
-}
-
-.signUpSection .logo {
-    font-family: logoFont;
-    letter-spacing: 3px;
-    display: flex;
-    position: absolute;
-    top: 0;
-    margin: 10px;
-    align-items: center;
-    gap: 7px;
-    opacity: 0.8;
-}
-
-.signUpSection .logo span {
-    margin-top: 5px;
 }
 
 .signUpSection .content {
@@ -124,7 +107,29 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 40px;
+    position: relative;
+}
+.signUpSection .logo {
+    font-family: logoFont;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    opacity: 0.8;
+    align-self: center;
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+}
+
+.signUpSection .logo img {
+    height: 20px;
+}
+
+.signUpSection .logo span {
+    margin-top: 5px;
 }
 
 .signUpSection .content .text,
@@ -134,7 +139,9 @@ a {
 }
 
 .signUpSection .content .text {
+    align-self: flex-start;
     margin-bottom: 20px;
+    margin-top: 20px;
     gap: 5px;
 }
 
