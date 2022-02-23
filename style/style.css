@@ -1,4 +1,4 @@
-@keyframes glitch {
+/* @keyframes glitch {
 
     2%,
     64% {
@@ -67,7 +67,7 @@
     to {
         opacity: 0;
     }
-}
+} */
 
 @font-face {
     font-family: logoFont;
@@ -110,6 +110,15 @@ a {
     align-items: center;
     color: #f0f8ff;
     position: relative;
+}
+
+.signUpSection #me {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.8;
+    font-family: font;
+    font-size: 0.75em;
+    margin-bottom: 5px;
 }
 
 .signUpSection .logo {
@@ -313,13 +322,13 @@ a {
     font-size: 2.5em;
     font-weight: bold;
     letter-spacing: 5px;
-    color: #f0f8ff;
-    opacity: 0.5;
+    color: #f0f8ff88;
+    /* opacity: 0.5; */
     position: absolute;
-    animation: glitch 1s linear infinite;
+    /* animation: glitch 1s linear infinite; */
 }
 
-.video div:before,
+/* .video div:before,
 .video div:after {
     content: attr(data-value);
     position: absolute;
@@ -335,7 +344,7 @@ a {
     animation: glitchBotom 1.5s linear infinite;
     clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
+} */
 
 @media screen and (max-width: 320px) {
     .signUpSection .logo span {
@@ -367,7 +376,11 @@ a {
     }
 }
 
-@media screen and (max-height: 537px) {
+@media screen and (max-height: 460px) {
+    .signUpSection #me {
+        display: none;
+    }
+
     .signUpSection .logo {
         display: none;
     }

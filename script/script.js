@@ -6,6 +6,7 @@ let openEyeBtn = document.querySelector(".fa-eye");
 let slashedEyeBtn = document.querySelector(".fa-eye-slash");
 let checkbox = document.querySelector("#checkbox");
 let submitBtn = document.querySelector("#submitBtn");
+let textAnimation = document.querySelector(".textAnimation");
 let smallerScreen = window.matchMedia("(max-width: 857px)");
 let clicked = false;
 
@@ -16,6 +17,20 @@ checkbox.addEventListener("click", checkBox);
 submitBtn.addEventListener("click", checkFields);
 usernameInput.addEventListener("click", hideBalloon);
 passwordInput.addEventListener("click", hideBalloon);
+window.addEventListener("DOMContentLoaded", () => {
+  // animated text  
+  textAnimation.style.animation = "flipInX 2s ease 0s 1 normal both";
+  setTimeout(() => {
+    textAnimation.style.animation = "flipOutX 2s ease 0s 1 normal both";
+  }, 5000);
+
+  setInterval(() => {
+    textAnimation.style.animation = "flipInX 2s ease 0s 1 normal both";
+    setTimeout(() => {
+      textAnimation.style.animation = "flipOutX 2s ease 0s 1 normal both";
+    }, 5000);
+  }, 7700);
+});
 
 // functions
 function showPassword() {
@@ -125,7 +140,7 @@ function checkFields(event) {
 }
 
 function hideBalloon(event) {
-  // when clicked, input's pop-up will desappear  
+  // when clicked, input's pop-up will desappear
   let element = event.target.parentElement;
 
   element.removeAttribute("data-balloon-length");
