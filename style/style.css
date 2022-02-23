@@ -499,8 +499,13 @@ a {
         gap: 60px
     }
 
+    .signUpSection .content form div:focus-within {
+        outline: 4px solid #228CDB;
+    }
+
     .signUpSection .content form div:last-of-type {
         align-self: flex-start;
+        gap: 10px;
     }
 
     .signUpSection .content form div:last-of-type input {
