@@ -10,6 +10,7 @@
     <link href="./style/style.css" rel="stylesheet">
     <link href="./media/logo.png" rel="icon">
     <link href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+    <link href="https://unpkg.com/balloon-css/balloon.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,12 +38,12 @@
                 <form>
                     <div>
                         <label>Username</label>
-                        <input type="text">
+                        <input id="usernameInput" type="text">
                     </div>
 
                     <div>
                         <label>Email</label>
-                        <input type="email">
+                        <input id="emailInput" type="email">
                     </div>
 
                     <div class="passwordDiv">
@@ -53,11 +54,11 @@
                     </div>
 
                     <div>
-                        <input type="checkbox">
+                        <input id="checkbox" type="checkbox">
                         <label>I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></label>
                     </div>
 
-                    <button>CREATE ACCOUNT</button>
+                    <button id="submitBtn">CREATE ACCOUNT</button>
                 </form>
             </div>
         </section>
