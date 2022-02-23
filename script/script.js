@@ -19,6 +19,7 @@ passwordInput.addEventListener("click", hideBalloon);
 
 // functions
 function showPassword() {
+  // when user click in the show password button
   slashedEyeBtn.style.display = "none";
   openEyeBtn.style.display = "inline";
 
@@ -26,6 +27,7 @@ function showPassword() {
 }
 
 function hidePassword() {
+  // when user click in the hide password button
   slashedEyeBtn.style.display = "inline";
   openEyeBtn.style.display = "none";
 
@@ -33,6 +35,7 @@ function hidePassword() {
 }
 
 function checkBox() {
+  // add or remove class 'checked' when user click in the checkbox  
   if (checkbox.classList.contains("checked") == false) {
     checkbox.classList.add("checked");
   } else {
@@ -41,6 +44,7 @@ function checkBox() {
 }
 
 function checkFields(event) {
+  // if   
   if (
     usernameInput.value == "" ||
     emailInput.value == "" ||
