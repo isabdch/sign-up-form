@@ -234,6 +234,7 @@ a {
     overflow: hidden;
     position: relative;
     font-family: logoFont;
+    background-color: #0B7189;
 }
 
 .video video {
