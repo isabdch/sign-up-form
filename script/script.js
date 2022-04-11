@@ -1,4 +1,4 @@
-// getting HTML elements and initialize variables
+// HTML elements and variables
 let usernameInput = document.querySelector("#usernameInput");
 let emailInput = document.querySelector("#emailInput");
 let passwordInput = document.querySelector("#passwordInput");
@@ -10,7 +10,7 @@ let textAnimation = document.querySelector(".textAnimation");
 let smallerScreen = window.matchMedia("(max-width: 857px)");
 let clicked = false;
 
-// adding events to the elements
+// events
 slashedEyeBtn.addEventListener("click", showPassword);
 openEyeBtn.addEventListener("click", hidePassword);
 checkbox.addEventListener("click", checkBox);
@@ -18,7 +18,7 @@ submitBtn.addEventListener("click", checkFields);
 usernameInput.addEventListener("click", hideBalloon);
 passwordInput.addEventListener("click", hideBalloon);
 window.addEventListener("DOMContentLoaded", () => {
-  // animated text  
+  // animated text
   textAnimation.style.animation = "flipInX 2s ease 0s 1 normal both";
   setTimeout(() => {
     textAnimation.style.animation = "flipOutX 2s ease 0s 1 normal both";
@@ -94,6 +94,31 @@ function checkFields(event) {
       usernameInput.parentElement.setAttribute("data-balloon-pos", "down");
     } else {
       usernameInput.parentElement.setAttribute("data-balloon-pos", "left");
+    }
+  }
+
+  // email input must be valid
+  if (
+    emailInput.value
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+  ) {
+  } else {
+    event.preventDefault();
+
+    emailInput.parentElement.setAttribute("data-balloon-length", "fit");
+    emailInput.parentElement.setAttribute("data-balloon-visible", "");
+    emailInput.parentElement.setAttribute(
+      "aria-label",
+      "Value must be a valid email address"
+    );
+
+    if (smallerScreen.matches) {
+      emailInput.parentElement.setAttribute("data-balloon-pos", "down");
+    } else {
+      emailInput.parentElement.setAttribute("data-balloon-pos", "left");
     }
   }
 
