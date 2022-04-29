@@ -8,12 +8,14 @@
 ![](https://img.shields.io/github/license/isabdch/sign-up-form?color=%239C95DC&style=for-the-badge)
 
  ## [SITE HERE](https://isabdch.github.io/sign-up-form/)
-![](media/screenshot.png)
+![](/github/gif-readme.gif)
 
 ## 📖 Table of Contents
 
 - [Project Description](#project-description)
 - [Status](#status)
+
+<br />
 
 ## ✏️ Project Description
 
@@ -27,6 +29,12 @@ Project is created with:
 
 - ### JavaScript
 
+<br />
+
 ## ⏱️ Status
 
 This project is finished.
+
+---
+
+Made with 💜 by Isabelle Brandão 👋 [See my LinkedIn](https://www.linkedin.com/in/isabelle-brand%C3%A3o-5645551a8/)

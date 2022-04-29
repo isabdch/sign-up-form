@@ -16,6 +16,7 @@ openEyeBtn.addEventListener("click", hidePassword);
 checkbox.addEventListener("click", checkBox);
 submitBtn.addEventListener("click", checkFields);
 usernameInput.addEventListener("click", hideBalloon);
+emailInput.addEventListener("click", hideBalloon);
 passwordInput.addEventListener("click", hideBalloon);
 window.addEventListener("DOMContentLoaded", () => {
   // animated text
@@ -87,7 +88,7 @@ function checkFields(event) {
     usernameInput.parentElement.setAttribute("data-balloon-visible", "");
     usernameInput.parentElement.setAttribute(
       "aria-label",
-      "Your username must contain at least 4 characters"
+      "Your username must be at least 4 characters"
     );
 
     if (smallerScreen.matches) {
@@ -135,7 +136,7 @@ function checkFields(event) {
     passwordInput.parentElement.setAttribute("data-balloon-visible", "");
     passwordInput.parentElement.setAttribute(
       "aria-label",
-      "Your password must contain at least: 5-25 characters, 1 number, 1 upper case letter, 1 lower case letter and 1 special character"
+      "Your password must be at least: 5-25 characters, 1 number, 1 upper case letter, 1 lower case letter and 1 special character"
     );
 
     if (smallerScreen.matches) {
