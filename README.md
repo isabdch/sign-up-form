@@ -19,7 +19,7 @@
 
 ## ✏️ Project Description
 
-This is a sign-up form page where the user can register by creating a username and a password, and entering an email. I added a password validation so that the user can then register successfully.
+This is a sign-up form page where the user can register by entering their username, password, and email. I also added input validation so that the user can then register successfully.
 
 Project is created with:
 
